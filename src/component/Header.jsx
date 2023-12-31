@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { FaHamburger, FaXing, FaPalette } from "react-icons/fa";
+import { FaHamburger, FaXing, FaUtensils } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { useLocation } from "react-router-dom";
 
-const Header = ({ textColor }) => {
+const Header = () => {
   let location = useLocation();
 
   const [navColour, updateNavbar] = useState(false);
@@ -112,10 +112,9 @@ const Header = ({ textColor }) => {
             </ul>
           </div>
           <div className="flex justify-center items-center gap-5">
-            <div className=" pl-3 cursor-pointer">
-              <a href="https://goggle.com">
-                <FaPalette className="text-2xl text-firstColor cursor-pointer" />
-                Shop Food
+            <div className="  cursor-pointer p-2 text-center border-teal-700 rounded-[100px] border-2 ">
+              <a href="https://jayfood-order.netlify.app">
+                <FaUtensils className="text-2xl text-firstColor cursor-pointer" />
               </a>
             </div>
 
@@ -125,7 +124,7 @@ const Header = ({ textColor }) => {
               }`}
             >
               <span className="hidden md:block z-10 text-12 ">
-                <a href="/reservation">Make Reservation </a>
+                <a href="/reservation"> Make Reservation </a>
               </span>
             </button>
             <div
@@ -133,9 +132,9 @@ const Header = ({ textColor }) => {
               onClick={toggleMenu}
             >
               {!nav ? (
-                <FaHamburger className="text-xl transition-all ease-in duration-[1000ms] dark:text-white" />
+                <FaHamburger className="text-xl transition-all ease-in duration-[1000ms] " />
               ) : (
-                <FaXing className="w-6 dark:text-white" />
+                <FaXing className="w-6 " />
               )}
             </div>
           </div>
@@ -144,10 +143,10 @@ const Header = ({ textColor }) => {
           className={
             !nav
               ? "hidden"
-              : "absolute w-[50%] t-0 h-screen bg-zinc-100 dark:text-white dark:bg-dark-back right-0 px-8 z-[10] py-10"
+              : "absolute w-[50%] t-0 h-screen text-black bg-zinc-100  right-0 px-8 z-[10] py-10"
           }
         >
-          <li>
+          <li className="mb-4 border-b pb-2 border-zinc-400 hover:pl-2  hover:border-b-teal-600 transition-all ease-in-out duration-600">
             <Link
               activeClass="active"
               to="hero"
@@ -161,7 +160,7 @@ const Header = ({ textColor }) => {
               Home
             </Link>
           </li>
-          <li>
+          <li className="mb-4 border-b pb-2 border-zinc-400 hover:pl-2 hover:border-b-teal-600 transition-all ease-in-out duration-300">
             <a
               href="/"
               className={`${location.pathname === "/" ? "active " : ""}`}
@@ -169,7 +168,7 @@ const Header = ({ textColor }) => {
               About Us
             </a>
           </li>
-          <li>
+          <li className="mb-4 border-b pb-2 border-zinc-400 hover:pl-2 hover:border-b-teal-600 transition-all ease-in-out duration-300">
             <a
               href="services"
               className={`${location.pathname === "/" ? "active " : ""}`}
@@ -177,7 +176,7 @@ const Header = ({ textColor }) => {
               Our Services
             </a>
           </li>
-          <li>
+          <li className="mb-4 border-b pb-2 border-zinc-400 hover:pl-2  hover:border-b-teal-600 transition-all ease-in-out duration-300">
             <a
               href="/menu"
               className={`${location.pathname === "/menu" ? "active " : ""}`}
@@ -185,13 +184,24 @@ const Header = ({ textColor }) => {
               Menu
             </a>
           </li>
-          <li>
+          <li className=" mb-4 border-b pb-2 border-zinc-400 hover:pl-2  hover:border-b-teal-600 transition-all ease-in-out duration-300">
             <a
               href="/"
               className={`${location.pathname === "/" ? "active " : ""}`}
             >
               Contact
             </a>
+          </li>
+          <li>
+             <button
+            className={`buttonp md:flex bg-white border-transparent  text-firstColor  ${
+              navColour ? " border-altColor border-2" : ""
+            }`}
+          >
+            <span className=" md:block z-10 text-xs ">
+              <a href="/reservation">Make Reservation </a>
+            </span>
+          </button>
           </li>
         </ul>
       </div>

@@ -73,7 +73,7 @@
   }
   input,select, textarea{
     @apply  border-zinc-400 rounded-sm mb-2 outline-transparent text-zinc-500 
-  }
+  }o
   ::placeholder{
     @apply text-sm italic
   }
