@@ -113,7 +113,7 @@ const Header = () => {
           </div>
           <div className="flex justify-center items-center gap-5">
             <div className="  cursor-pointer p-2 text-center border-teal-700 rounded-[100px] border-2 ">
-              <a href="https://jayfood-order.netlify.app">
+              <a href="https://jayfood-order-wheat.vercel.app">
                 <FaUtensils className="text-2xl text-firstColor cursor-pointer" />
               </a>
             </div>
