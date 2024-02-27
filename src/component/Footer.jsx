@@ -94,7 +94,7 @@ const Footer = () => {
                     name="entry.1994729641"
                     placeholder="Name"
                     onChange={handleInputChange}
-                    className="w-full"
+                    className="w-full p-3"
                     // name= 'name'
                     // value={formData.name}
                   />
@@ -104,7 +104,7 @@ const Footer = () => {
                     type="email"
                     name="entry.1328250020"
                     placeholder="Email"
-                    className="contact-input w-full"
+                    className="contact-input w-full p-3"
                     onChange={handleInputChange}
                   
                     // name='email'
@@ -116,7 +116,7 @@ const Footer = () => {
                     type="text"
                     name="entry.1874333904"
                     placeholder="Subject"
-                    className="contact-input w-full"
+                    className="contact-input w-full p-3"
                     onChange={handleInputChange}
                     // value={formData.subject}
                     // name="subject"
